@@ -1,0 +1,55 @@
+[
+   {
+     "field": "Informations Personnelles",
+     "questions": [
+       {
+         "title": "Situation Familiale",
+         "description": "Veuillez choisir votre situation familiale.",
+         "type": "select",
+         "options": [
+           { "value": "Célibataire", "label": "Célibataire" },
+           { "value": "Marié(e)", "label": "Marié(e)" },
+           { "value": "Divorcé(e)", "label": "Divorcé(e)" },
+           { "value": "Veuf(ve)", "label": "Veuf(ve)" }
+         ],
+         "required": true
+       },
+       {
+         "title": "Quel est votre sexe ?",
+         "description": "Veuillez choisir votre sexe.",
+         "type": "select",
+         "options": [
+           { "value": "Homme", "label": "Homme" },
+           { "value": "Femme", "label": "Femme" },
+           { "value": "Autre", "label": "Autre" }
+         ],
+         "required": true
+       },
+       {
+         "title": "Quel est votre nom ?",
+         "description": "Veuillez entre votre nom de famille.",
+         "type": "text",
+         "required": true
+       },
+       {
+         "title": "Quelle est votre prénom ?",
+         "description": "Veuillez entre votre prénom.",
+         "type": "text",
+         "required": true
+       },
+       {
+         "title": "Quelle est votre adresse e-mail ?",
+         "description": "Veuillez entre votre email",
+         "type": "email",
+         "required": true
+       },
+       {
+         "title": "Quel est votre numéro de téléphone?",
+         "description": "Veuillez entre votre numéro de téléphone.",
+         "type": "tel",
+         "required": true
+       }
+     ]
+   }
+ ]
+ 

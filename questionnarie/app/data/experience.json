@@ -1,0 +1,41 @@
+[
+   {
+      "field": "Expérience Professionnelle",
+      "questions":[
+         {
+            "title": "Quel est votre poste actuel ?",
+            "description": "Veuillez entrer votre poste actuel.",
+            "type": "text",
+            "required": true
+         },
+         {
+            "title": "Quelle est votre entreprise actuelle ?",
+            "description": "Veuillez entrer le nom de votre entreprise actuelle.",
+            "type": "text",
+            "required": true
+         },
+         {
+            "title": "Depuis combien de temps travaillez-vous dans cette entreprise ?",
+            "description": "",
+            "type": "number",
+            "required": true
+         },
+         {
+            "title": "Avez-vous déjà travaillé dans d'autres entreprises ?",
+            "description": "",
+            "type": "select",
+            "options": [
+               {
+                  "value": "Oui",
+                  "label": "Oui"
+               },
+               {
+                  "value": "Non",
+                  "label": "Non"
+               }
+            ],
+            "required": true
+         }
+      ]
+   }
+]

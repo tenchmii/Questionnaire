@@ -1,0 +1,57 @@
+[
+   {
+      "field" : "Education Parcours",
+      "questions":[
+         {
+            "title": "Quel est votre niveau d'éducation ?",
+            "description": "Veuillez choisir votre niveau d'éducation.",
+            "type": "select",
+            "options": [
+               {
+                  "value": "Aucun diplôme",
+                  "label": "Aucun diplôme"
+               },
+               {
+                  "value": "Diplôme de l'enseignement secondaire",
+                  "label": "Diplôme de l'enseignement secondaire"
+               },
+               {
+                  "value": "Baccalauréat",
+                  "label": "Baccalauréat"
+               },
+               {
+                  "value": "Licence",
+                  "label": "Licence"
+               },
+               {
+                  "value": "Master",
+                  "label": "Master"
+               },
+               {
+                  "value": "Doctorat",
+                  "label": "Doctorat"
+               }
+            ],
+            "required": true
+         },
+         {
+            "title" : "Quel est votre domaine d'étude ?",
+            "description" : "",
+            "type" : "text",
+            "required" : true
+         },
+         {
+            "title" : "Quel est le nom de votre établissement ?",
+            "description" : "",
+            "type" : "text",
+            "required" : true
+         },
+         {
+            "title" : "Quelle est l'année d'obtention de votre diplôme ?",
+            "description" : "",
+            "type" : "number",
+            "required" : true
+         }
+      ]
+   }
+]
