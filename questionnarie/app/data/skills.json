@@ -1,43 +1,53 @@
 [
    {
-      "field": "Documentation CV",
+      "field": "Compétences",
       "questions":[
          {
-            "title": "Téléversez votre CV",
-            "description": "Veuillez téléverser votre CV au format PDF ou Word.",
-            "type": "file",
-            "required": true,
-            "accept": [
-               {
-                  "value": ".pdf",
-                  "label": "PDF"
-               },
-               {
-                  "value": ".docx",
-                  "label": "Word"
-               }
-            ]
+            "title": "Quelles sont vos compétences techniques principales ?",
+            "description": "Listez vos compétences techniques comme des langages, frameworks ou outils.",
+            "type": "text",
+            "required": true
          },
          {
-            "title": "Téléversez votre lettre de motivation",
-            "description": "Veuillez téléverser votre lettre de motivation au format PDF ou Word.",
-            "type": "file",
-            "required": true,
-            "accept": [
+            "title": "Quel est votre niveau en développement web ?",
+            "description": "",
+            "type": "select",
+            "options": [
                {
-                  "value": ".pdf",
-                  "label": "PDF"
+                  "value": "Débutant",
+                  "label": "Débutant"
                },
                {
-                  "value": ".docx",
-                  "label": "Word"
+                  "value": "Intermédiaire",
+                  "label": "Intermédiaire"
+               },
+               {
+                  "value": "Avancé",
+                  "label": "Avancé"
                }
-            ]
+            ],
+            "required": true
          },
          {
-            "title": "Votre message",
-            "description": "Veuillez entrer un message ou une note supplémentaire.",
-            "type": "textarea",
+            "title": "Avez-vous des compétences en design graphique ?",
+            "description": "",
+            "type": "select",
+            "options": [
+               {
+                  "value": "Oui",
+                  "label": "Oui"
+               },
+               {
+                  "value": "Non",
+                  "label": "Non"
+               }
+            ],
+            "required": true
+         },
+         {
+            "title": "Quels logiciels ou outils maîtrisez-vous ?",
+            "description": "Ex: Figma, Photoshop, Git, VSCode...",
+            "type": "text",
             "required": false
          }
       ]

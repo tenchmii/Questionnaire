@@ -22,21 +22,24 @@ export default function InfoPage({ formData, updateFormData }) {
   };
 
   return (
-    <div className="p-6 max-w-4xl w-full mx-auto">
+    <div className="p-6 max-w-4xl w-full mx-auto ">
       <h1 className="text-2xl font-bold mb-8 text-center">{section.field}</h1>
       <form className="space-y-6">
         {Array.from({ length: Math.ceil(questions.length / 2) }, (_, i) => (
           <div className="flex gap-6" key={i}>
             {questions.slice(i * 2, i * 2 + 2).map((q, index) => (
               <div className="w-1/2" key={index}>
-                <label className="block text-sm font-medium mb-1">{q.title}</label>
+                <div className="flex">
+                  <label className="block text-sm font-medium mb-1">{q.title}</label>
+                  <span className="text-red-700">*</span>
+                </div>
                 <p className="text-gray-500 text-xs mb-2">{q.description}</p>
                 {q.type === "select" ? (
                   <select
                     value={localData[q.title] || ""}
                     required={q.required}
                     onChange={(e) => handleChange(e, q.title)}
-                    className="w-full border border-gray-300 rounded p-2"
+                    className="w-full border border-gray-300 rounded p-2 outline-none bg-white"
                   >
                     <option value="">-- Sélectionner --</option>
                     {q.options.map((opt, idx) => (
@@ -49,7 +52,7 @@ export default function InfoPage({ formData, updateFormData }) {
                     required={q.required}
                     value={localData[q.title] || ""}
                     onChange={(e) => handleChange(e, q.title)}
-                    className="w-full border border-gray-300 rounded p-2"
+                    className="w-full border border-gray-300 rounded p-2 outline-none bg-white"
                   />
                 )}
               </div>

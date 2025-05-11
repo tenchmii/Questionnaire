@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from "react";
 import questionsData from "../data/cv.json";
 
@@ -14,11 +16,15 @@ export default function CvPage({ formData = {}, updateFormData }) {
   });
 
   useEffect(() => {
-    updateFormData && updateFormData(localData);
+    if (updateFormData) {
+      updateFormData(localData);
+    }
   }, [localData]);
 
   const handleChange = (e, title) => {
-    setLocalData(prev => ({ ...prev, [title]: e.target.value }));
+    const value =
+      e.target.type === "file" ? e.target.files[0]?.name || "" : e.target.value;
+    setLocalData(prev => ({ ...prev, [title]: value }));
   };
 
   return (
@@ -34,7 +40,7 @@ export default function CvPage({ formData = {}, updateFormData }) {
                 value={localData[q.title] || ""}
                 required={q.required}
                 onChange={(e) => handleChange(e, q.title)}
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 bg-white"
               >
                 <option value="">-- Sélectionner --</option>
                 {q.options.map((opt, idx) => (
@@ -43,13 +49,20 @@ export default function CvPage({ formData = {}, updateFormData }) {
                   </option>
                 ))}
               </select>
-            ) : (
+            ) : q.type === "file" ? (
               <input
+                type="file"
+                required={q.required}
+                onChange={(e) => handleChange(e, q.title)}
+                className="w-full border border-gray-300 rounded p-2 bg-white"
+              />
+            ):(
+              <textarea
                 type={q.type}
                 value={localData[q.title] || ""}
                 required={q.required}
                 onChange={(e) => handleChange(e, q.title)}
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 bg-white "
               />
             )}
           </div>

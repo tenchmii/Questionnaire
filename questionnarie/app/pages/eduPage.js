@@ -34,7 +34,7 @@ export default function EduPage({ formData = {}, updateFormData }) {
                 value={localData[q.title] || ""}
                 required={q.required}
                 onChange={(e) => handleChange(e, q.title)}
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 bg-white"
               >
                 <option value="">-- Sélectionner --</option>
                 {q.options.map((opt, idx) => (
@@ -49,7 +49,7 @@ export default function EduPage({ formData = {}, updateFormData }) {
                 value={localData[q.title] || ""}
                 required={q.required}
                 onChange={(e) => handleChange(e, q.title)}
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 bg-white"
               />
             )}
           </div>
