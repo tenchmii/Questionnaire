@@ -49,7 +49,7 @@ export default function Main() {
 
    return (
       <div className="flex flex-col justify-center items-center w-full bg-gray-100 h-screen">
-         <div className=" w-2/3 h-[500px] flex justify-center items-center bg-[#fefedf] rounded-xl">{slides[currentSlide]}</div>
+         <div className=" md:w-2/3 w-full md:h-[500px] h-screen flex justify-center items-center bg-[#fefedf] rounded-xl">{slides[currentSlide]}</div>
 
          <div className="w-2/3 px-10 pb-6 flex justify-between mt-2">
             {currentSlide > 0 && (

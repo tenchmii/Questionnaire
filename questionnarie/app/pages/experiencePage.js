@@ -27,7 +27,10 @@ export default function ExpPage({ formData = {}, updateFormData }) {
       <form className="space-y-6">
         {questions.map((q, index) => (
           <div key={index}>
-            <label className="block text-sm font-medium mb-1">{q.title}</label>
+            <div className="flex">
+              <label className="block text-sm font-medium mb-1">{q.title}</label>
+              <span className="text-red-700">*</span>
+            </div>
             <p className="text-gray-500 text-xs mb-2">{q.description}</p>
             {q.type === "select" ? (
               <select

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ReviewPage({ formData }) {
   return (
-    <div className="w-full p-6 max-w-4xl mx-auto bg-[#FF70A0] h-[700px] overflow-auto rounded-lg">
+    <div className="w-full p-6 max-w-4xl mx-auto  h-[500px] overflow-auto rounded-lg">
       <h1 className="text-2xl font-bold mb-8 text-center">Review Your Answers</h1>
       <div className="">
         {Object.entries(formData).map(([key, value], index) => (

@@ -33,7 +33,10 @@ export default function CvPage({ formData = {}, updateFormData }) {
       <form className="space-y-6">
         {questions.map((q, index) => (
           <div key={index}>
-            <label className="block text-sm font-medium mb-1">{q.title}</label>
+            <div className="flex">
+              <label className="block text-sm font-medium mb-1">{q.title}</label>
+              <span className="text-red-700">*</span>
+            </div>
             <p className="text-gray-500 text-xs mb-2">{q.description}</p>
             {q.type === "select" ? (
               <select
@@ -56,7 +59,7 @@ export default function CvPage({ formData = {}, updateFormData }) {
                 onChange={(e) => handleChange(e, q.title)}
                 className="w-full border border-gray-300 rounded p-2 bg-white"
               />
-            ):(
+            ) : (
               <textarea
                 type={q.type}
                 value={localData[q.title] || ""}
